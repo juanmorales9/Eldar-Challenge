@@ -42,14 +42,14 @@ public class ChallengeApplication {
 
 			System.out.println('\n');
 
-			System.out.println('\n');
-			System.out.println('\n');
+
+
 
 			System.out.println("Segunda Tarjeta ");
 			System.out.println("Info Tarjeta: " + utils.getInfoTarjeta(amexCard));
 			System.out.println("Es una operacion Valida? " + utils.OperacionValida(amexOperacion));
 			System.out.println("La tarjeta es Valida? " + utils.isCreditCardValid(amexCard));
-			System.out.println("Son las mismas tarjetas? " + utils.mismaTarjeta(visaCard, amexCard));
+			System.out.println("Son las mismas tarjetas? " + utils.mismaTarjeta(visaCard, visaCard));
 			System.out.println("Tasa de operacion: " + utils.getTasaOperacion(amexOperacion));
 			System.out.println('\n');
 

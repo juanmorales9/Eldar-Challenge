@@ -1,27 +1,27 @@
 package com.eldar.challenge.creditCard.api;
 
 public class OperationRequest {
-    String brand;
-    Double amount;
+    String marca;
+    Double monto;
 
-    public OperationRequest(String brand, Double amount) {
-        this.brand = brand;
-        this.amount = amount;
+    public OperationRequest(String marca, Double monto) {
+        this.marca = marca;
+        this.monto = monto;
     }
 
-    public String getBrand() {
-        return brand;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
-    public Double getAmount() {
-        return amount;
+    public Double getMonto() {
+        return monto;
     }
 
-    public void setAmount(Double amount) {
-        this.amount = amount;
+    public void setMonto(Double monto) {
+        this.monto = monto;
     }
 }

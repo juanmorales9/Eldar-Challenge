@@ -17,18 +17,17 @@ public class OperationController {
     public ResponseEntity getOperationInfo(@RequestBody OperationRequest request) {
         try {
             final OperacionesTarjetaCredito utils = new OperacionesTarjetaCredito();
-            final String brandName = request.brand;
-            final Double amount = request.amount;
+            final String marca = request.marca;
+            final Double monto = request.monto;
 
-            final Marca brand = utils.getTarjetaNombre(brandName);
+            final Marca brand = utils.getTarjetaNombre(marca);
             final Double rate = brand.calcularTasa();
 
-            return  ResponseEntity.ok(("Request approved"+ (double) Math.round(rate)+ brand + amount));
+            return  ResponseEntity.ok(("Request approved"+ (double) Math.round(rate)+ brand + monto));
 
         } catch (final IllegalArgumentException e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
-           // return  ResponseEntity.badRequest(("Request body format error"+ 0d+ VISA.getInstance()+ 0d));
         }
     }
 }
